@@ -45,8 +45,11 @@ classdef Edf2Mat < handle
     %   everything in the @folder & private folder is required,
     %   private/edf2asc.exe and private/processEvents.m, the mex files and
     %   the dll's/frameworks. On Mac the edfapi.framework must be copied to
-    %   /Library/Framworks/ !!!Not the personal Library but to the root
-    %   Library
+    %   /Library/Frameworks/ - the root Library, not the personal one.
+    %   Without admin rights the framework can be placed in
+    %   ~/Library/Frameworks/ instead, but then the mex file has to be
+    %   repointed with install_name_tool. See the section "User-based
+    %   installation (without admin rights)" in the README for details.
     %
     % Other Classes required:
     %   no
